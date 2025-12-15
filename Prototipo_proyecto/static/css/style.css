@@ -71,8 +71,8 @@ body {
     padding: 15px 0;
     transition: color 0.3s;
 }
-.main-menu nav ul li.active a { color: #FE570C; } /* Color para el elemento activo */
-.main-menu nav ul li a:hover { color: #FE570C; }
+.main-menu nav ul li.active a { color: #2f5bcc; } /* Color para el elemento activo */
+.main-menu nav ul li a:hover { color: #6ce5e8; }
 
 /* Botones y submenús */
 .theme-btn {
@@ -85,13 +85,13 @@ body {
     font-weight: 600;
 }
 .bg-2 {
-    background-color: #FE570C; /* Naranja principal */
+    background-color: #2f5bcc; /* Naranja principal */
     color: white !important;
     padding: 10px 25px;
     border-radius: 50px;
     margin-left: 15px; /* Espacio para el botón de Ingresar */
 }
-.bg-2:hover { background-color: #d1460a; }
+.bg-2:hover { background-color: #40b1cc; }
 
 .submenu {
     position: absolute;
@@ -120,7 +120,7 @@ body {
 }
 .submenu li a:hover {
     background-color: #f5f5f5;
-    color: #FE570C;
+    color: #2f5bcc;
 }
 
 /* Iconos de la derecha */
@@ -186,18 +186,18 @@ body {
     margin-bottom: 30px;
 }
 .hero-content h1 span {
-    color: #FE570C; /* Color naranja para la palabra "MEJOR VALORADA" */
+    color: #2f5bcc; /* Color naranja para la palabra "MEJOR VALORADA" */
 }
 
 .hero-button .theme-btn {
     font-size: 18px;
     padding: 15px 35px;
     border-radius: 50px;
-    background-color: #007bff; /* Color azul para el botón principal */
+    background-color: #2f5bcc; /* Color azul para el botón principal */
     color: white;
 }
 .hero-button .theme-btn:hover {
-    background-color: #0056b3;
+    background-color: #40b1cc;
 }
 .hero-button .theme-btn i {
     margin-left: 10px;
@@ -352,7 +352,7 @@ body {
 .about-content .icon-items .dot {
     width: 8px;
     height: 8px;
-    background-color: #FE570C; /* Color naranja */
+    background-color: #40b1cc; /* Color naranja */
     border-radius: 50%;
     flex-shrink: 0; /* Evita que el punto se encoja */
     margin-top: 8px; /* Alineación con el inicio del texto */
