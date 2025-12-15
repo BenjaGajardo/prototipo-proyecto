@@ -1,0 +1,146 @@
+*{
+    outline: solid black 2px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Podría ser esta */
+}
+
+/* Estilos del contenedor principal del header */
+.header-2 {
+    position: relative; /* O position: sticky; si quieres que se pegue al scroll */
+    z-index: 99; /* Para asegurar que esté por encima de otros elementos */
+    background-color: #ffffff; /* Asumiendo un fondo blanco/claro */
+}
+
+/* Contenedor del menú */
+.mega-menu-wrapper {
+    /* Estilos de ancho y centrado si los necesita */
+}
+
+/* Fila principal del header */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Espaciado superior/inferior */
+}
+
+/* Logo */
+.sticky-logo img {
+    max-width: 230px;
+    height: auto;
+}
+
+/* Menú de navegación principal (escritorio) */
+.main-menu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para poner los elementos en línea */
+}
+
+.main-menu nav ul li {
+    position: relative;
+    margin-right: 30px;
+}
+
+.main-menu nav ul li a {
+    text-decoration: none;
+    color: #333; /* Color de texto base */
+    font-weight: 500;
+    display: block;
+    padding: 15px 0;
+    transition: color 0.3s;
+}
+
+/* Estilos para el botón de Ingresar (theme-btn bg-2) */
+.theme-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.bg-2 {
+    background-color: #FE570C; /* Color de fondo principal (naranja) */
+    color: white !important; /* El color de texto forzado en línea es blanco */
+    padding: 10px 25px;
+    border-radius: 50px; /* Asumiendo un botón redondeado */
+}
+.bg-2:hover {
+    background-color: #d1460a; /* Un color más oscuro para el hover */
+}
+
+/* Submenú (para Ingresar) */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.main-menu nav ul li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+.submenu li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Contenedor de iconos de la derecha */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Items de icono (WhatsApp/Teléfono) */
+.icon-items {
+    display: flex;
+    align-items: center;
+}
+.icon-items a {
+    text-decoration: none;
+}
+.icon-items .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    /* El color verde está en línea: style="color:green" */
+}
+.icon-items .content h4 a {
+    font-size: 16px;
+    font-weight: 700;
+    /* El color del teléfono está en línea: style="color:#f2f2f2" */
+    color: #333; /* Color de texto por defecto si no es "theme-btn" */
+}
+
+/* Hamburguesa (solo visible en móviles) */
+.header__hamburger {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Ocultar el menú principal en pantallas pequeñas y mostrar la hamburguesa */
+/* La clase 'd-none d-xl-block' en el HTML ya maneja esto, pero este es el concepto: */
+@media (max-width: 1199px) { /* xl breakpoint */
+    .main-menu {
+        display: none;
+    }
+    .header__hamburger {
+        display: block; /* Muestra la hamburguesa */
+    }
+}
+@media (min-width: 1200px) { /* xl breakpoint */
+    .header__hamburger {
+        display: none; /* Oculta la hamburguesa */
+    }
+}
