@@ -1,43 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar WOW.js
-    new WOW().init();
+document.addEventListener("DOMContentLoaded", () => {
 
-    // --- Funcionalidad Sticky Header (lo que ya teníamos) ---
-    const header = document.getElementById('header-sticky');
+    /* WOW.js */
+    if (typeof WOW === "function") {
+        new WOW().init();
+    }
+
+    /* Sticky header */
+    const header = document.getElementById("header-sticky");
     if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("sticky", window.scrollY > 100);
         });
     }
 
-    // --- Funcionalidad del Menú Móvil (Offcanvas) ---
-    const sidebarToggle = document.querySelector('.sidebar__toggle');
-    const offcanvasArea = document.querySelector('.fix-area');
-    const offcanvasClose = document.querySelector('.offcanvas__close button');
-    const offcanvasOverlay = document.querySelector('.offcanvas__overlay');
+    /* Menú hamburguesa */
+    const hamburger = document.querySelector(".sidebar__toggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("menuOverlay");
 
-    if (sidebarToggle && offcanvasArea && offcanvasOverlay) {
-        sidebarToggle.addEventListener('click', function() {
-            offcanvasArea.classList.add('active');
-            offcanvasOverlay.classList.add('active');
+    if (hamburger && mobileMenu && overlay) {
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.add("active");
+            overlay.classList.add("active");
         });
     }
 
-    if (offcanvasClose && offcanvasArea && offcanvasOverlay) {
-        offcanvasClose.addEventListener('click', function() {
-            offcanvasArea.classList.remove('active');
-            offcanvasOverlay.classList.remove('active');
-        });
+    function closeAll() {
+        mobileMenu.classList.remove("active");
+        overlay.classList.remove("active");
     }
 
-    if (offcanvasOverlay && offcanvasArea) {
-        offcanvasOverlay.addEventListener('click', function() {
-            offcanvasArea.classList.remove('active');
-            offcanvasOverlay.classList.remove('active');
-        });
-    }
+    if (closeMenu) closeMenu.addEventListener("click", closeAll);
+    if (overlay) overlay.addEventListener("click", closeAll);
+
 });
