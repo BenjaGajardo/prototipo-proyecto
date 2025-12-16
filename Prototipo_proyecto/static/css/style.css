@@ -66,6 +66,8 @@ body {
 
 /* Espaciado entre elementos en un grid */
 /* --- Estilos de la Barra de Navegación (lo que ya teníamos) --- */
+
+
 .header-2 {
     width: 100%;
     position: relative;
@@ -345,6 +347,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
+    animation: float-bob-x 8s ease-in-out infinite alternate;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     /* Sombra para la imagen principal */
 }
@@ -359,6 +362,13 @@ body {
     /* Ligeramente transparentes */
     z-index: 1;
     /* Detrás del contenido principal */
+}
+
+.frame-shape img,
+.man-shape img,
+.girl-shape img,
+.frame-shape-2 img{
+    border-radius: 30px;
 }
 
 .frame-shape {
@@ -586,25 +596,116 @@ body {
 /* --- Estilos de las Imágenes de Acerca de --- */
 /* Contenedor principal de las dos imágenes */
 .about-image-items-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .about-image-items-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-image-items-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* Imagen grande/normal */
+.about-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.about-img {
+    width: 100%;
+    height: 320px;   /* AJUSTA AQUÍ */
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.section-title {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 /* Imagen grande/normal */
-.about-image img {
+/*
+.section-title img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Imagen secundaria (con redondez especial en el original) */
+
+.about-image-items-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title2 {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between; 
+    gap: 30px;                      
+    padding: 0 40px;               
+*/
+
+.section-title2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 15px;          /* igual al container */
+    box-sizing: border-box;   /* CLAVE */
+    max-width: 100%;
+}
+
+.section-title2 > .about-image {
+    flex: 1 1 0;
+    max-width: 50%;
+}
+
+.section-title2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 40px;
+}
+
+.section-title2 {
+    overflow: hidden;
+}
+
+
+.about-img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+
+/* Imagen secundaria (con redondez especial en el original) 
 .about-image-2 {
     margin-top: -50px;
-    /* Sube la imagen un poco para superponerse */
 }
-
+*/
 .about-image-2 img {
     max-width: 100%;
     height: auto;
@@ -650,8 +751,8 @@ body {
 }
 
 .navbar {
-
     padding: 5px 0;
+    
 }
 
 .nav-link {
@@ -704,15 +805,20 @@ body {
     min-height: 100px;
 }
 
-
 .navbar-brand img {
     height: 90px;
     width: auto;
 }
-
 
 .navbar-toggler {
     padding: 4px 6px;
     font-size: 14px;
 }
 
+.nav-item {
+    margin-left: 10vh;
+}
+
+.navbar-nav .btn {
+    white-space: nowrap;
+}

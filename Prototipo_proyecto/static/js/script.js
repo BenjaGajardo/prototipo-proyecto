@@ -35,3 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (overlay) overlay.addEventListener("click", closeAll);
 
 });
+
+
+
+/*Pestaña: Clasificacion*/
+
