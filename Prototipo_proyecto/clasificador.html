@@ -154,57 +154,57 @@
 
   <!-- NAVBAR -->
   <header class="navbar navbar-expand-xl navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
+    <div class="container">
 
-            <!-- Logo -->
-            <a class="navbar-brand" href="#inicio">
-                <img src="assets/img/logo/LogoTrue-removebg-preview.png" alt="logo" width="150">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#inicio">
+        <img src="assets/img/logo/LogoTrue-removebg-preview.png" alt="logo" width="150">
+      </a>
+
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-xl-0 align-items-xl-center gap-xl-3">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Clasificador</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="contactoPIE.html">Contacto PIE</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Ingreso de cursos
             </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#ingreso-cursos-basica">Enseñanza Básica</a></li>
+              <li><a class="dropdown-item" href="#ingreso-cursos-media">Enseñanza Media</a></li>
+            </ul>
+          </li>
 
-            <!-- Botón hamburguesa -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <!-- Botón login -->
+          <li class="nav-item ms-xl-3">
+            <a class="btn btn-primary rounded-pill px-4" href="[URL_DE_INICIO_DE_SESIÓN]">
+              Inicio de Sesión
+            </a>
+          </li>
 
-            <!-- Menú -->
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-xl-0 align-items-xl-center gap-xl-3">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Inicio</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="static/pages/clasificador.html">Clasificador</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto-pie">Contacto PIE</a>
-                    </li>
-
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Ingreso de cursos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#ingreso-cursos-basica">Enseñanza Básica</a></li>
-                            <li><a class="dropdown-item" href="#ingreso-cursos-media">Enseñanza Media</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Botón login -->
-                    <li class="nav-item ms-xl-3">
-                        <a class="btn btn-primary rounded-pill px-4" href="[URL_DE_INICIO_DE_SESIÓN]">
-                            Inicio de Sesión
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </header>
+        </ul>
+      </div>
+    </div>
+  </header>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container py-4">
@@ -341,20 +341,21 @@
               </div>
 
               <!-- Asistencia rápida -->
-<div class="mb-3">
-  <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
-  <div class="btn-group btn-group-sm w-100" role="group">
-    <input type="radio" class="btn-check" name="asistencia-102" id="asiste-102" autocomplete="off" checked>
-    <label class="btn btn-outline-success" for="asiste-102">
-      <i class="fas fa-check-circle me-1"></i> Asistente
-    </label>
+              <div class="mb-3">
+                <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
+                <div class="btn-group btn-group-sm w-100" role="group">
+                  <input type="radio" class="btn-check" name="asistencia-102" id="asiste-102" autocomplete="off"
+                    checked>
+                  <label class="btn btn-outline-success" for="asiste-102">
+                    <i class="fas fa-check-circle me-1"></i> Asistente
+                  </label>
 
-    <input type="radio" class="btn-check" name="asistencia-102" id="inasiste-102" autocomplete="off">
-    <label class="btn btn-outline-danger" for="inasiste-102">
-      <i class="fas fa-times-circle me-1"></i> Inasistente
-    </label>
-  </div>
-</div>
+                  <input type="radio" class="btn-check" name="asistencia-102" id="inasiste-102" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="inasiste-102">
+                    <i class="fas fa-times-circle me-1"></i> Inasistente
+                  </label>
+                </div>
+              </div>
 
               <!-- Resumen rápido -->
               <div class="d-flex flex-wrap gap-1 mb-3">
@@ -407,20 +408,21 @@
               </div>
 
               <!-- Asistencia rápida -->
-<div class="mb-3">
-  <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
-  <div class="btn-group btn-group-sm w-100" role="group">
-    <input type="radio" class="btn-check" name="asistencia-103" id="asiste-103" autocomplete="off" checked>
-    <label class="btn btn-outline-success" for="asiste-103">
-      <i class="fas fa-check-circle me-1"></i> Asistente
-    </label>
+              <div class="mb-3">
+                <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
+                <div class="btn-group btn-group-sm w-100" role="group">
+                  <input type="radio" class="btn-check" name="asistencia-103" id="asiste-103" autocomplete="off"
+                    checked>
+                  <label class="btn btn-outline-success" for="asiste-103">
+                    <i class="fas fa-check-circle me-1"></i> Asistente
+                  </label>
 
-    <input type="radio" class="btn-check" name="asistencia-103" id="inasiste-103" autocomplete="off">
-    <label class="btn btn-outline-danger" for="inasiste-103">
-      <i class="fas fa-times-circle me-1"></i> Inasistente
-    </label>
-  </div>
-</div>
+                  <input type="radio" class="btn-check" name="asistencia-103" id="inasiste-103" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="inasiste-103">
+                    <i class="fas fa-times-circle me-1"></i> Inasistente
+                  </label>
+                </div>
+              </div>
 
               <!-- Resumen rápido -->
               <div class="d-flex flex-wrap gap-1 mb-3">
@@ -470,20 +472,21 @@
               </div>
 
               <!-- Asistencia rápida -->
-<div class="mb-3">
-  <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
-  <div class="btn-group btn-group-sm w-100" role="group">
-    <input type="radio" class="btn-check" name="asistencia-104" id="asiste-104" autocomplete="off" checked>
-    <label class="btn btn-outline-success" for="asiste-104">
-      <i class="fas fa-check-circle me-1"></i> Asistente
-    </label>
+              <div class="mb-3">
+                <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
+                <div class="btn-group btn-group-sm w-100" role="group">
+                  <input type="radio" class="btn-check" name="asistencia-104" id="asiste-104" autocomplete="off"
+                    checked>
+                  <label class="btn btn-outline-success" for="asiste-104">
+                    <i class="fas fa-check-circle me-1"></i> Asistente
+                  </label>
 
-    <input type="radio" class="btn-check" name="asistencia-104" id="inasiste-104" autocomplete="off">
-    <label class="btn btn-outline-danger" for="inasiste-104">
-      <i class="fas fa-times-circle me-1"></i> Inasistente
-    </label>
-  </div>
-</div>
+                  <input type="radio" class="btn-check" name="asistencia-104" id="inasiste-104" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="inasiste-104">
+                    <i class="fas fa-times-circle me-1"></i> Inasistente
+                  </label>
+                </div>
+              </div>
 
               <!-- Resumen rápido -->
               <div class="d-flex flex-wrap gap-1 mb-3">
@@ -510,7 +513,7 @@
         </div>
 
 
-                <!-- CARD DE ESTUDIANTE (EJEMPLO) -->
+        <!-- CARD DE ESTUDIANTE (EJEMPLO) -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card border-0 shadow-sm rounded-3 student-card bg-white position-relative overflow-hidden">
             <div class="card-body">
@@ -532,20 +535,21 @@
               </div>
 
               <!-- Asistencia rápida -->
-<div class="mb-3">
-  <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
-  <div class="btn-group btn-group-sm w-100" role="group">
-    <input type="radio" class="btn-check" name="asistencia-106" id="asiste-106" autocomplete="off" checked>
-    <label class="btn btn-outline-success" for="asiste-106">
-      <i class="fas fa-check-circle me-1"></i> Asistente
-    </label>
+              <div class="mb-3">
+                <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
+                <div class="btn-group btn-group-sm w-100" role="group">
+                  <input type="radio" class="btn-check" name="asistencia-106" id="asiste-106" autocomplete="off"
+                    checked>
+                  <label class="btn btn-outline-success" for="asiste-106">
+                    <i class="fas fa-check-circle me-1"></i> Asistente
+                  </label>
 
-    <input type="radio" class="btn-check" name="asistencia-106" id="inasiste-106" autocomplete="off">
-    <label class="btn btn-outline-danger" for="inasiste-106">
-      <i class="fas fa-times-circle me-1"></i> Inasistente
-    </label>
-  </div>
-</div>
+                  <input type="radio" class="btn-check" name="asistencia-106" id="inasiste-106" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="inasiste-106">
+                    <i class="fas fa-times-circle me-1"></i> Inasistente
+                  </label>
+                </div>
+              </div>
 
               <!-- Resumen rápido -->
               <div class="d-flex flex-wrap gap-1 mb-3">
@@ -571,7 +575,7 @@
           </div>
         </div>
 
-                <!-- CARD DE ESTUDIANTE (EJEMPLO) -->
+        <!-- CARD DE ESTUDIANTE (EJEMPLO) -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card border-0 shadow-sm rounded-3 student-card bg-white position-relative overflow-hidden">
             <div class="card-body">
@@ -593,20 +597,21 @@
               </div>
 
               <!-- Asistencia rápida -->
-<div class="mb-3">
-  <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
-  <div class="btn-group btn-group-sm w-100" role="group">
-    <input type="radio" class="btn-check" name="asistencia-105" id="asiste-105" autocomplete="off" checked>
-    <label class="btn btn-outline-success" for="asiste-105">
-      <i class="fas fa-check-circle me-1"></i> Asistente
-    </label>
+              <div class="mb-3">
+                <label class="form-label mb-1 small text-slate-500">Asistencia clase de hoy</label>
+                <div class="btn-group btn-group-sm w-100" role="group">
+                  <input type="radio" class="btn-check" name="asistencia-105" id="asiste-105" autocomplete="off"
+                    checked>
+                  <label class="btn btn-outline-success" for="asiste-105">
+                    <i class="fas fa-check-circle me-1"></i> Asistente
+                  </label>
 
-    <input type="radio" class="btn-check" name="asistencia-105" id="inasiste-105" autocomplete="off">
-    <label class="btn btn-outline-danger" for="inasiste-105">
-      <i class="fas fa-times-circle me-1"></i> Inasistente
-    </label>
-  </div>
-</div>
+                  <input type="radio" class="btn-check" name="asistencia-105" id="inasiste-105" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="inasiste-105">
+                    <i class="fas fa-times-circle me-1"></i> Inasistente
+                  </label>
+                </div>
+              </div>
 
               <!-- Resumen rápido -->
               <div class="d-flex flex-wrap gap-1 mb-3">
