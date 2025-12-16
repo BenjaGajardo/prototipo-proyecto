@@ -1,5 +1,10 @@
+*{
+    outline: solid 1px black;
+}
+
 /* --- Globales y Resets (Si no los tienes, agrégalos) --- */
 body {
+    padding-top: 70px;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     /* Usando Poppins como ejemplo */
@@ -314,6 +319,7 @@ body {
     /* Color naranja para la palabra "MEJOR VALORADA" */
 }
 
+
 .hero-button .theme-btn {
     font-size: 18px;
     padding: 15px 35px;
@@ -560,7 +566,7 @@ body {
     border-radius: 50%;
     flex-shrink: 0;
     /* Evita que el punto se encoja */
-    margin-top: 8px;
+    margin-top: 8px
     /* Alineación con el inicio del texto */
 }
 
@@ -582,7 +588,7 @@ body {
 .about-image-items-2 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 /* Imagen grande/normal */
@@ -665,3 +671,48 @@ body {
 .btn-primary:hover {
     background-color: #40b1cc;
 }
+
+
+@media (max-width: 768px) {
+
+    h1, h2 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .hero-section {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .hero-section img {
+        max-width: 70%;
+        height: auto;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* Header más bajo */
+.navbar {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    min-height: 100px;
+}
+
+
+.navbar-brand img {
+    height: 90px;
+    width: auto;
+}
+
+
+.navbar-toggler {
+    padding: 4px 6px;
+    font-size: 14px;
+}
+
